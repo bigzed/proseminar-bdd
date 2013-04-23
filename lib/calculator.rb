@@ -11,4 +11,8 @@ class Calculator
   def divide
     @args[0].to_f / @args[1].to_f
   end
+
+  def multiply
+    @args[0] * @args[1]
+  end
 end
