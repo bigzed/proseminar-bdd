@@ -16,3 +16,13 @@ end
 RSpec::Core::RakeTask.new('spec') do |t|
   t.verbose = true
 end
+
+desc "Cleanup doc directory"
+task :clean do
+
+  pwd = File.dirname(__FILE__)
+  exts = ['aux', 'bbl', 'blg', 'fdb_latexmk', 'log', 'out', 'pdf', 'synctex.gz']
+  exts.each do |e|
+    Dir["#{pwd}/**/*.#{e}"].each { |a| File.delete(a) }
+  end
+end
