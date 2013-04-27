@@ -13,4 +13,6 @@ Rake::TestTask.new do |t|
   t.verbose = true
 end
 
-RSpec::Core::RakeTask.new('spec')
+RSpec::Core::RakeTask.new('spec') do |t|
+  t.verbose = true
+end
