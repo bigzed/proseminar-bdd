@@ -24,5 +24,4 @@ class CalculatorTest < Test::Unit::TestCase
     calculator.push 4
     assert_equal(calculator.multiply, 12)
   end
-
  end
