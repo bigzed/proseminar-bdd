@@ -1,6 +1,6 @@
 \section{Test Driven Development}
   Bevor wir in BDD eintauchen k"onnen m"ussen wir verstehen wie Test Driven 
-  Development funktioniert, welche Vortiele es uns bringt und auf welche 
+  Development funktioniert, welche Vorteile es uns bringt und auf welche 
   Probleme wir sto"sen k"onnen.
 
   \subsection{Red-Green-Refactor}
@@ -19,14 +19,14 @@
     ausgef"uhrt wird und fehlschl"agt, was bei den meisten Testingframeworks mit 
     Rot markiert wird, nun das Feature implementiert wird und der Test nicht 
     fehlschl"agt -dies wird oft mit Gr"un dargestellt.\\
-    Sobald der Test nicht mehr feschl"agt betrachtet man das entstandende Design 
+    Sobald der Test nicht mehr feschl"agt betrachtet man das entstandene Design 
     des Features, reduziert Duplikate und kommentiert seinen Code. Nun kann man 
     ein weiteres mal in den Zyklus eintreten und die n"achsten Features wieder 
-    nach dem gleichen System entwicklen.\\
+    nach dem gleichen System entwickeln.\\
     Ein Zyklus sollte allerdings nicht l"anger als 15 Minuten dauern. Falls doch
-    heisst dies entweder das zu implmentierende Feature ist zu gro"s gew"ahlt
+    hei"st dies entweder das zu implementierende Feature ist zu gro"s gew"ahlt
     oder der gew"ahlte L"osungsweg nicht optimal ist. Generell 
-    sollten sich die Entwickler\_innen immer die Frage stellen ob Debugen 
+    sollten sich die Entwickler\_innen immer die Frage stellen ob Debuggen 
     schneller als neu implementieren eines Features ist, solange die Tests bei erst
     Implementierung fehlschlagen.
 
@@ -36,7 +36,7 @@
     sich konstant weiterentwickelndes Design herauskristallisieren.\\
     Durch diese evolvierende Art des Designs, auch 'Emergent Design'\cite[p.~4]{Chelimsky:2010} genannt, kann sich die Software und somit auch die 
     Entwickler\_innen dynamisch den Anforderungen des Stakeholders anpassen, was 
-    besonders in agilen Softwareprozessen n"otig ist. Desweiteren ist es auf 
+    besonders in agilen Softwareprozessen n"otig ist. Des weiteren ist es auf 
     Grund der 'Test First' Struktur stets m"oglich ein zumindest begrenzt 
     fertiges Produkt zu pr"asentieren, was sofortige Kommunikation und Feedback
     des Stakeholders erm"oglicht und schnell aufkommende Probleme in der Software
@@ -47,20 +47,20 @@
     der Software gesehen werden. Eher ist es als Prozess zusehen um qualitativen
     Quellcode an den der Entwicklung angeschlossenen Testzyklus zu "ubergeben.\\
     Doch genau das f"uhrt schnell zur Verwirrungen, da Entwickler\_innen dazu
-    neigen TDD als m"oglichkeit zusehen sich diesen extra Testzyklus zu sparen.
+    neigen TDD als M"oglichkeit zusehen sich diesen extra Testzyklus zu sparen.
     Dies f"uhrt dazu das w"ahrend des Entwickelns neuer Features nicht nur 
-    Tests geschrieben werden die das Verhalten des Features nach aussen spezifizieren
+    Tests geschrieben werden die das Verhalten des Features nach au"sen spezifizieren
     sondern interne technische Details auf Funktion "uberpfr"ufen. Dadurch werden
     die Tests besonders von unerfahrenen TDD-Entwickler\_innen schnell zu 
     ausf"uhrlichem White-Box-Testing genutzt, was zu einer starken Verschr"ankung
     von Test-Suite und eigentlich Quellcode f"uhrt. Durch diese Verschr"ankung
-    wird das im Zyklus enthaltene Umstrukturieren des Codes immerweiter 
-    erschwert und die Test-Suite verliert an Wartbarkeit, da f"ur das von aussen
+    wird das im Zyklus enthaltene Umstrukturieren des Codes immer weiter 
+    erschwert und die Test-Suite verliert an Wartbarkeit, da f"ur das von au"sen
     betrachtete Verhalten unwichtige technische Details bei "Anderungen zum 
-    fehschlagen der Tests f"uhren k"onnen.\\
+    fehlschlagen der Tests f"uhren k"onnen.\\
     Speziell hierf"ur m"ussen die Entwickler\_innen Disziplin an den Tag legen,
     denn sie sind es die das "aussere Verhalten als Test implementieren und sich
-    selbst davon abhalten m"ussen internes Vehalten zu testen.\\
+    selbst davon abhalten m"ussen internes Verhalten zu testen.\\
     Ein strukturelles Problem bei TDD ist es, das die Entwickler\_innen selbst
     die Anforderungen der Stakeholder in Tests "ubersetzen m"ussen und es 
     dadurch dazu kommen kann das schon die Tests falsches verhalten pr"ufen
@@ -73,7 +73,7 @@
     Erfahrung der Entwickler\_innen ausgeglichen werden indem sie klare 
     Methodennamen vergeben und durch viele Kommentare auch Menschen die nicht 
     im Programmieren bewandert sind die M"oglichkeit geben die Tests zu 
-    verstehene.\\
+    verstehen.\\
     Allerdings muss nun jedes neue Teammitglied an diese speziellen Verfahren
     gew"ohnt werden, da sie auf Grund mangelnder Einheitlichkeit stark zwischen
     verschiedenen Teams varieren k"onnen.

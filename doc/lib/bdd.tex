@@ -2,7 +2,7 @@
   Beavhiour Driven Development basiert auf den Ideen von TDD und erweitert diese
   um wichtige Namenskonventionen und Begriffe, sodass klarer wird welche Schritte
   wie als Programmierer\_inn zu befolgen sind um qualitativ hochwertige Software
-  zu entwicklen.\\
+  zu entwickeln.\\
   Diese Erweiterung f"uhrt neue Begriffe und Werkzeuge in vier Bereichen
   \begin{itemize}
     \item Vokabular
@@ -22,16 +22,16 @@
       Verhalten der Software getriebenes Design.\\
       In BDD wird daher nicht als erstes die Struktur des Quellcodes durch die 
       Entwickler\_innen durch Tests gepr"uft, sondern auf das gew"unschte
-      Verhalten der Software von aussen eingegangen. Hierzu werden zusammen
+      Verhalten der Software von au"sen eingegangen. Hierzu werden zusammen
       mit den Stakeholdern User-Stories in Form der {\em Gherkin}\cite{Gherkin} Sprache verfasst, die
       dann automatisiert in Verhaltenstest der Software umgewandelt werden.
       Dadurch ist es m"oglich das die Stakeholder schnell und einfach das 
       Verhalten gew"unschte Verhalten ihrer Software definieren k"onnen und
-      die Entwickler\_innen nun gegen dieses Verhalten entwicklen.\\
+      die Entwickler\_innen nun gegen dieses Verhalten entwickeln.\\
       Die {\em Gherkin-Sprache} ist in einer Englisch nahen Syntax 
       gehalten und basiert im Grunde auf den drei Stichw"ortern 'Given', 'When' 
       und 'Then'. Nun wird in simplen englischen S"atzen definiert welche 
-      Vorbbedingung gelten sollten ('given'), durch welche Ereignisse die 
+      Vorbedingung gelten sollten ('given'), durch welche Ereignisse die 
       Nachbedingung erforderlich wird ('when') und welche Nachbedingung gelten
       sollte ('then'). Dadurch ist es nun den Stakeholdern m"oglich direkt 
       das gew"unschte Verhalten zu spezifizieren.\\
@@ -40,8 +40,8 @@
       es ohne extensive Vorkenntnisse m"oglich Features in {\em Gherkin} zu spezifizieren.
       \lstinputlisting[caption=Gherkin Beispiel ({\em Ruby} Cucumber)]{../features/multiplication.feature}
       Nat"urlich stellt sich nun die Frage wie aus diesem leicht strukturierten
-      Fliesstext automatisiert Testf"alle f"urdie Entwickler\_innen erstellt werden.
-      Dies l"ost {\em Cucumber}\cite{Cucumber}, ein BDD Framework f"ur {\em Ruby}, in dem die Entwickler\_innen durch Definition kleiner Regex-Schritte angebeben 
+      Flie"stext automatisiert Testf"alle f"ur die Entwickler\_innen erstellt werden.
+      Dies l"ost {\em Cucumber}\cite{Cucumber}, ein BDD Framework f"ur {\em Ruby}, in dem die Entwickler\_innen durch Definition kleiner Regex-Schritte angeben 
       welches Satz Schema welche Bedeutung hat.
       \lstinputlisting[caption=Schritte Definition (Cucumber),firstline=7]{../features/step_definitions/calculator_steps.rb}
       Sobald diese Definition existieren sind Stakeholder sogar in der Lage
@@ -50,17 +50,17 @@
       ist.\\\\
 
       Den wichtigsten Vorteil und Unterschied den die {\em Gherkin-Sprache} 
-      mit sich bringt ist, das nun eine klar definierte kommunikation zwischen 
+      mit sich bringt ist, das nun eine klar definierte Kommunikation zwischen 
       Stakeholder und Entwickler\_innen m"oglich ist. Hierdurch wird die 
       Fehlerquelle des falschen Verstehens der Anforderungen durch die 
       Entwickler\_innen nahezu komplett Ausgeschaltet und sie k"onnen sich darauf
       konzentrieren das Verhalten ihrer Software an die durch die Stakeholder
       geschaffenen Verhaltenstests anzupassen.\\\\
 
-      Ausserdem enth"alt BDD ebenfalls Tools und Empfehlungen wie Testmethoden
-      zu bennen sind um aus diesen automatisch Dokumentation des Verhaltens 
+      Au"serdem enth"alt BDD ebenfalls Tools und Empfehlungen wie Testmethoden
+      zu benennen sind um aus diesen automatisch Dokumentation des Verhaltens 
       der Software zu generieren, welche auch noch von nicht Entwickler\_innen
-      lesbar ist. Hierzu gibt es ja nach Tool unterschiedlich konventionen.\\
+      lesbar ist. Hierzu gibt es ja nach Tool unterschiedlich Konventionen.\\
       In diesem Fall {\em RSpec}\cite{Rspec}, ein Tool was f"ur Tests in BDD 
       Prozessen und auch als alleinstehendes TDD Tool geeignet ist. Es ist aus 
       {\em RBehave}\cite{North:2007}, dem ersten BDD Tool f"ur {\em Ruby} hervorgegangen.
@@ -79,7 +79,7 @@ Calculator
       \end{lstlisting}
       Diese klar strukturierte Ausgabe bietet nat"urlich viele Vorteile gegen"uber
       der Standard Unit-Test-Suite von Ruby, welche nicht in der Lage ist 
-      automatische Documentation zu generieren und keine Namenskonventionen 
+      automatische Dokumentation zu generieren und keine Namenskonventionen 
       fordert.\\
       Ein weiterer Vorteil den moderne BDD Tools wie {\em RSpec } mit sich bringen
       sind speziell angepasste Methoden wie {\em it() }, {\em context()} und 
@@ -95,7 +95,7 @@ Calculator
       auf Grund von Tools wie {\em RSpec } zu jedem Test eine von Stakeholdern
       lesbare Dokumentation gibt, die automatisch aus dem Testfall generiert wird.\\
       In weiterem Sinne geh"oren hierzu auch Tools wie Git zur Versionierung, 
-      Jenkins f"ur Integration Testing, Pivotal Tracker zur kolloborativen 
+      Jenkins f"ur Integration Testing, Pivotal Tracker zur kollaborativen 
       Beschreibung von Bugs und Features. 
 
   \subsection{Workflow in Behaviour Driven Development}
@@ -111,9 +111,9 @@ Calculator
     \end{wrapfigure}
     Dieser "au"ser Zyklus bedeutet nichts anderes als das Stakeholder Stories
     definieren um Verhalten der Software zu spezifizieren und sie somit bestimmen
-    wann alle Stories 'gr"un' sind. Die Entwickler\_innen haben nun die m"oglichkeit sich einfach Feature f"ur Feature an den Stories der Stakeholder entlang zu 
+    wann alle Stories 'gr"un' sind. Die Entwickler\_innen haben nun die M"oglichkeit sich einfach Feature f"ur Feature an den Stories der Stakeholder entlang zu 
     hangel und diese nacheinander zu Implementieren. Dabei werden bis auf die 
-    zeitliche L"ange eines Features die gleichen Massgaben wie bei TDD beachtet.\\
+    zeitliche L"ange eines Features die gleichen Ma"sgaben wie bei TDD beachtet.\\
     Der innere Zyklus kommt nur zustande, falls die Features definierten Features
     von den Stakeholdern komplexer gew"ahlt sind. Dann k"onnen die Entwickler 
     diese nach TDD Prinzipien entwickeln und somit am Schluss sicher seien 
@@ -134,14 +134,16 @@ Calculator
       Verhalten schreiben und f"ur diese dann auch die passenden Step-Definitionen
       wie in Listing 1.1 und 1.2 gezeigt.\\
       Danach w"urden wir die gew"unschten Features implementieren und diese
-      fals es die komplexit"at verlangt nochmal einzeln in TDD entwickeln.\\
-      Die genutzte Toolchain w"are Cucumber f"ur BDD und RSpec f"ur TDD.
+      falls es die Komplexit"at verlangt nochmal einzeln in TDD entwickeln.\\
+      Die genutzte Toolchain w"are Cucumber f"ur BDD und RSpec f"ur TDD.\\\\
+      Ein Beispiel Projekt, sowie diese Arbeit sind zu finden auf 
+      \href{http://github.com/bigzed/proseminar-bdd}{github/bigzed}.
 
   \subsection{Anderere Sprachen, andere Tools}
     Falls BDD in anderen Sprachen verfolgt werden soll gibt es hier eine nicht
     vollst"andige Liste mit anderen g"angigen Tools:
     \begin{itemize}
-      \item Java -> \href{http://http://jbehave.org/}{JBehave}
+      \item Java -> \href{http://jbehave.org/}{JBehave}
       \item C -> \href{http://code.google.com/p/cbehave/}{CBehave}
       \item Ruby -> \href{http://cukes.info}{Cucumber}, \href{http://rspec.info}{RSpec}
       \item PHP -> \href{http://behat.org}{behat}
