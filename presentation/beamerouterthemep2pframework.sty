@@ -1,0 +1,111 @@
+% P2P Framework Beamer theme:
+% May 2011, by Andreas Volk <avolk[at]mail[dot]upb[dot]de>
+%
+% Based on UPB Beamer theme:
+% October 2008, by Michael Knopf <jimknopf[at]mail[dot]upb[dot].de>
+%
+% Based on the LaTeX-Beamer package:
+% Copyright 2007 by Till Tantau <tantau[at]users[dot]sourceforge[dot]net>
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+% New Unit for the outer theme. 1 upb@unit equals the height of the navigation
+% bars at the top and the bottom of the pages.
+\newdimen\upb@unit
+\upb@unit=.025\paperwidth
+\mode<presentation>
+
+% Including the background image (PDF only, LaTeX + EPS does not work as
+% expected...)
+\defbeamertemplate*{background canvas}{p2pframework theme}
+{
+  \pgfimage[width=\paperwidth,height=\paperheight]{graphics/frameworkbackground}%
+}
+
+
+% Frametitle definition. The hskip is needed because of the 3 upb@unitmargin.
+% See beamer size for details.
+\defbeamertemplate*{frametitle}{p2pframework theme}
+{
+  \vskip1.5\upb@unit%
+  \usebeamercolor[fg]{structure}%
+  \insertframetitle
+  \vskip2mm
+}
+
+
+\renewcommand*\footnoterule{}
+\defbeamertemplate*{footnote}{p2pframework theme}
+{
+  \parindent 1em\noindent%
+  \raggedright
+  \hbox to 1.8em{\hfil\insertfootnotemark}\insertfootnotetext\par%
+  \vskip0.5\upb@unit%
+}
+
+% Footline definition. Again invisible boxes ae used for alignment.
+\defbeamertemplate*{footline}{p2pframework theme}
+{
+  \leavevmode%
+  \hskip18\upb@unit%
+  \hbox{%  
+   \begin{beamercolorbox}[wd=20\upb@unit,ht=0em,dp=0\upb@unit,right]{ignorebg}
+      \usebeamercolor[fg]{footline text}
+    Arbeitsgruppe - Corporate Semantic Web 
+    \end{beamercolorbox}
+    
+   \begin{beamercolorbox}[wd=0.75\upb@unit,ht=0em,dp=0\upb@unit,right]{ignorebg}
+      \usebeamercolor[fg]{footline framenumber}
+      \insertframenumber{}
+    \end{beamercolorbox}
+  }
+\vskip.3\upb@unit
+}
+
+
+\defbeamertemplate*{title page}{p2pframework theme}{
+	\thispagestyle{empty}
+	\vskip1mm
+      	 
+      		\begin{beamercolorbox}[ht=12\upb@unit,left]{ignorebg}% 
+			\usebeamerfont{title page title}
+		        \inserttitle 	\\[2ex] 
+	   	\end{beamercolorbox}   	
+   		\begin{beamercolorbox}[left]{ignorebg}% 
+			\insertshortauthor \\[1mm]
+	   	\end{beamercolorbox}   	
+   		\begin{beamercolorbox}[left]{ignorebg}% 
+	   		\usebeamerfont{title page email}
+			\insertauthor \\[1mm]
+	   	\end{beamercolorbox}  
+
+	\begin{beamercolorbox}[ht=15mm]{ignorebg}% 
+ 	
+  	\end{beamercolorbox}  
+
+\begin{columns}[onlytextwidth,b]
+	\begin{column}{0.5\textwidth}  	
+	\end{column}
+	\begin{column}{0.5\textwidth}
+   		\begin{beamercolorbox}[right]{ignorebg}% 
+   		\usebeamerfont{title page department}
+   		\includegraphics[scale=0.15]{graphics/csw_logo} \\[1mm]
+\textbf{Prof. Dr. Adrian Paschke}\\
+Email: paschke@inf.fu-berlin.de\\
+Arbeitsgruppe - Corporate Semantic Web \\
+Fachbereich Mathematik und Informatik, Institut für Informatik\\
+Freie Universität Berlin \\
+http://www.inf.fu-berlin.de/groups/ag-csw   	
+\end{beamercolorbox}  
+	\end{column}
+\end{columns}
+}
+
+% This line disables the navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Setting the frame margin to 3 upb@unit on both sides.
+\setbeamersize{text margin left=1.4\upb@unit,text margin right=1.4\upb@unit}
+\mode
+<all>

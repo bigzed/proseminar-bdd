@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.10pt}
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Gliederung}{2}{0}{1}
+\beamer@sectionintoc {2}{Was ist TDD? - Begriffskl"arung}{3}{0}{2}
+\beamer@sectionintoc {3}{Was ist BDD?}{10}{0}{3}
+\beamer@sectionintoc {4}{Andere Sprachen, andere Tools}{16}{0}{4}
